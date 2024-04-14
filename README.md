@@ -1,1 +1,2 @@
-# Lab 2 - Starter
+# Lab 2 - HTML
+https://symsoph.github.io/HTML_DevTools/
