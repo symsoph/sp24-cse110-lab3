@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> <!-- not visible to users -->
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="/screenshots/IMG_0650.PNG"/>
+    <title>First Meeting Minutes</title>
+  </head>
+  <body> <!-- visible to users -->
+    <header>
+        <div>WELCOME TO THE TEAM</div>
+        <p>I am excited to have you all here today. May we remain healthy this quarter and finish this academic year strong!</p>
+        <nav>
+            <ul>
+              <li><a href="#email">Contact Me</a></li>
+              <li><a href="#Phone">Number</a></li>
+              <li><a href="#Company_Policy">Company Rules</a></li>
+            </ul>
+          </nav>
+    <hr>
+    </header>
+    <main>
+        <section>
+
+            <h1 style="background-color:powderblue;">Meeting Agenda</h1>
+            <span>Happy</span><br> Monday <strong><em>04-15-24</em></strong></br>
+            <div class="Check-in List">
+                <h2>Checking in</h2>
+                    <ol>    
+                        <li><input type="checkbox" />Attendence (link)</li>
+                        <li><input type="checkbox" />Round Robin Updates (Weekend)</li>
+                        <li><input type="checkbox" />Re🎩 of last week's progress</li>
+                    </ol>
+            </div>
+        </section>
+        
+        <section>
+
+            <h2>This Week...</h2>
+                <ol>
+                    <li><input type="checkbox" />Goals + Feedback</li>
+                    <li><input type="checkbox" /><b>New Project</b></li>
+                    <dl> <!--Description list to sub points-->
+                        <dt></dt>
+                        <dd>- Purpose</dd>
+                        <dd>- Role Assignments</dd>
+                        <dd>- Brainstorm</dd>
+                    </dl>
+                    <li><input type="checkbox" />Questions</li>
+                </ol>
+        </section>
+
+        <section>
+            <h2>Recordings of Meeting</h2>
+            <!--download link for audio - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio-->
+            <details>
+                <summary>Video</summary>
+                <p>Definitely a video from a meeting</p>
+                    <video width="420" height="440" controls>
+                        <source src="/screenshots/Aug31_part2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+              
+            </details>
+            <details>
+                <summary>Audio-only</summary>
+                <p>First audio file belongs to the actual video. The second one is an experimental music piece for MUS 170 ;)</p>
+                    <audio controls>
+                        <source src="/screenshots/Aug31_part2.mp4" type="audio/mpeg">
+                    </audio>
+                    <audio controls>
+                        <source src="/screenshots/loop-final.mp3" type="audio/mpeg">
+                    </audio>
+            </details>
+            <details>
+                <summary>Image of the Week</summary>
+                <img src="/screenshots/IMG_0650.png" alt="my web icon" width="500" height="500">
+            </details>
+
+        </section>
+    </main>
+    
+    <footer>
+        <h3 id="subscribe"><i>Sanity Check</i></h3>
+        <form onsubmit="alert('Done, have a nice day~')">
+          <fieldset>          
+            <label for="current-date">Today's Date:</label>
+            <input type="date" id="current-date" name="current-date"><br><br>
+              <label for="simple question">The weather today is:</label>
+              <select name="weather" id="weather">
+                <option value="rain">Rainy</option>
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="windy">Windy</option>
+              </select>
+    
+            <p>Are you human?</p>
+                <input type="radio" id="yes" name="humanity" value="correct">
+                <label for="html">Yes</label><br>
+                <input type="radio" id="no" name="robot" value="false">
+                <label for="css">No</label><br>
+                <br>  
+
+                <label for="math">2+2 =</label>
+                <input list="answers" name="answer" id="answer">
+                <datalist id="answers">
+                  <option value="4">
+                  <option value="Fish">
+                  <option value="Fsh">
+                  <option value="Your mom">
+                  <option value="22">
+                </datalist>
+
+            <p>(Anon) Comments? Send them in the text box below! </p>
+              <textarea name="message" rows="10" cols="30">Hi, I wonder...</textarea>
+              <br>
+              <input type="submit" value="Submit">
+            <br><br>
+          </fieldset>
+        </form>
+        <br>
+        <div>&copy; sofia n at symsoph.github.io</div>
+      </footer>  
+  </body>
+</html>
