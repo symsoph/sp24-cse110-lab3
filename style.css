@@ -1,0 +1,14 @@
+/* Might add more fonts */
+@font-face {
+    font-family: "Rubik Glitch Pop";
+    src: url(https://fonts.google.com/specimen/Rubik+Glitch+Pop);
+}
+:root {
+    --main-bg-color: pink;
+}
+body {
+    background-color: var(--main-bg-color, white);
+}
+h1 {
+    font-family: "Rubik Glitch Pop", sans-serif;
+}
