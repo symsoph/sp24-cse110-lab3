@@ -6,9 +6,31 @@
 :root {
     --main-bg-color: pink;
 }
+#rcorners1 {
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px; 
+    width: 200px;
+    height: 5mm;  /*abs unit*/
+  }
+  
+  #rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;  
+  }
 body {
     background-color: var(--main-bg-color, white);
+    font-size: 16px;
 }
 h1 {
     font-family: "Rubik Glitch Pop", sans-serif;
+    font-size: 50px; /* absolute unit, more for printing - does not resize on diff device screen sizes*/
+    border-style: dashed solid dashed; /* must have border-style first for others at */
+    border-radius: 10px;
+    border-width: 1pc; /* abs unit */
+    border-color: #008498
 }
+/* border for 'meeting agenda' */
