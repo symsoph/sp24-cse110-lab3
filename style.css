@@ -5,32 +5,165 @@
 }
 :root {
     --main-bg-color: pink;
+    --green-border-box: #73AD21;
+    --base-color: orange;
 }
+* {
+    word-wrap: keep-all;
+    text-align: auto;
+    text-overflow: ellipsis;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: darkgreen;
+}
+.flex-container > h2 {
+    background-color: lightcoral;
+    max-width: 20vh;
+    margin: 1vw;
+    text-align: center;
+    line-height: 5vh;
+    font-size: 3vh;
+}
+.grid-container {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    background-color: darkgreen;
+    padding: 10px;
+}
+/* default hover effect */
+a:hover {
+    background-color: gold;
+}
+/* when hover is supported */
+@media (hover: hover) {
+    /* when hover is supported */
+    a:hover {
+      color: white;
+      background: black;
+    }
+  }
+  
+summary:active {
+    color: tomato;
+}
+/* attribute need [class] then [class=""] */
+p[class] {
+    font-size: 23px;
+ }
+p[class="recording_important"] {
+    background-color: color-mix(in srgb, blue, white 80%);
+  }
 #rcorners1 {
     border-radius: 25px;
-    background: #73AD21;
+    background: var(--green-border-box, rgb(255, 255, 255));
     padding: 20px; 
     width: 200px;
-    height: 5mm;  /*abs unit*/
+    height: 5mm;  /*abs unit */
+    margin: left;
   }
   
   #rcorners2 {
     border-radius: 25px;
-    border: 2px solid #73AD21;
-    padding: 20px; 
-    width: 200px;
-    height: 150px;  
+    border: 3px solid #73AD21;
+    padding-top: 20px; 
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 800px;
+    height: 200px;  
+    margin: auto;
   }
-body {
-    background-color: var(--main-bg-color, white);
-    font-size: 16px;
+#descriptors {
+    font-size: 2.5vh;
 }
-h1 {
-    font-family: "Rubik Glitch Pop", sans-serif;
-    font-size: 50px; /* absolute unit, more for printing - does not resize on diff device screen sizes*/
-    border-style: dashed solid dashed; /* must have border-style first for others at */
-    border-radius: 10px;
-    border-width: 1pc; /* abs unit */
-    border-color: #008498
+body {
+    background-color: var(--main-bg-color, hsl(0, 0%, 100%));
+    font-size: 150%; /* relative unit */
 }
 /* border for 'meeting agenda' */
+h1 {
+    font-family: "Rubik Glitch Pop", sans-serif;
+    font-size: 7vh; /* relative - height */
+    border-style: dashed solid dashed; /* must have border-style first for others at */
+    border-radius: 10px;
+    border-width: 1pc; /* abs unit - does not resize on diff device screen sizes*/
+    border-color: #008498;
+    text-align: center;
+    position: relative;
+    top: 10px; bottom: 20px;
+    display: block;
+}
+h2 { 
+    color: color(from var(--base-color) srgb r g b);   
+    font-size: 15vmin; /*relative */
+}
+/* hidden text */
+ol {
+    color: pink;
+}
+/* hidden text */
+h2:has(+ ol) {   
+    color: pink;
+}
+/* NESTING*/
+.example {
+    font-size: 1.2rem;
+  }
+  
+   .example > a {
+    color: tomato;
+  }
+  
+  .example > a:hover,
+  .example > a:focus {
+    color: ivory;
+    background-color: tomato;
+  }
+  
+  h3, div, form, span {
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: 3px;
+      margin-left: 20px;
+      margin-right: 20px;
+      text-align: left;
+    }
+.align {
+    text-align: center;
+}
+.align fieldset {
+    font-weight: bold;
+}
+div.copyright {
+    font-size: 16px; /* copyright bubble */
+    max-width: 200px;
+    min-width: none;
+    position: static; 
+}
+/* for two forms at botom */
+.container {
+    display: flex;
+    column-count: 2;
+    column-gap: 34vw;
+}
+/* for nested bullet list */
+li {
+    list-style-type: disc;
+    color: white;
+  }
+  
+li li {
+    list-style-type: circle;
+  }
+/* sibling combinator */
+li:first-of-type + li {
+    list-style-type: georgian;
+}
+/* general sibling combinator */
+summary ~ p {
+    border: solid;
+    border-color: rgb(44, 74, 211);
+}
