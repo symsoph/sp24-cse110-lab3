@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body> <!-- visible to users -->
-    <header>
-
+    <header id="rcorners2">
         <div>WELCOME TO THE TEAM</div>
         <p>I am excited to have you all here today. May we remain healthy this quarter and finish this academic year strong!</p>
         <nav>
@@ -17,75 +16,52 @@
               <li><a href="#Phone">Number</a></li>
               <li><a href="#Company_Policy">Company Rules</a></li>
             </ul>
+            <div></div>
           </nav>
-    <hr>
     </header>
     <main>
-        <section>
 
-            <h1 style="background-color:powderblue;">Meeting Agenda</h1>
-            <span>Happy</span> Monday <strong><em>04-15-24</em></strong>
-            <div class="Check-in List">
-                <h2>Checking in</h2>
-                    <ol>    
-                        <li><input type="checkbox">Attendence</li>
-                        <li><input type="checkbox">Round Robin Updates (Weekend)</li>
-                        <li><input type="checkbox">Re🎩 of last week's progress</li>
-                    </ol>
-            </div>
-        </section>
+  <h1 style="background-color:powderblue;">Meeting Agenda</h1>
+  <div>Monday <strong><em>04-15-24</em></strong></div>
+  <section>
+    <div class="flex-container">
+        <h2 id="check-in">Checking in</h2>
+          <ol id="descriptors">    
+              <li><input type="checkbox">Attendence</li>
+              <li><input type="checkbox">Round Robin Updates (Weekend)</li>
+              <li><input type="checkbox">Re🎩 of last week's progress</li>
+          </ol>
+    </div>
+  </section>
         
-        <section>
-
-            <h2>This Week...</h2>
-                <ol>
-                    <li><input type="checkbox">Goals + Feedback</li>
-                    <li><input type="checkbox"><b>New Project</b></li>
-                </ol>
-                    <dl> <!--Description list to sub points-->
-                        <dt> </dt>
-                        <dd>- Purpose</dd>
-                        <dd>- Role Assignments</dd>
-                        <dd>- Brainstorm</dd>
-                    </dl>
-                <ul>
-                    <li><input type="checkbox">Questions</li>
-                </ul>
-        </section>
-
-        <section>
-            <h2>Recordings of Meeting</h2>
-            <!--download link for audio - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio-->
-            <details>
-                <summary>Video</summary>
-                <p>Definitely a video from a meeting</p>
-                    <video width="420" height="440" controls>
-                        <source src="https://symsoph.github.io/HTML_DevTools/screenshots/Aug31_part2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-              
-            </details>
-            <details>
-                <summary>Audio-only</summary>
-                <p>First audio file belongs to the actual video. The second one is an experimental music piece for MUS 170 ;)</p>
-                    <audio controls>
-                        <source src="https://symsoph.github.io/HTML_DevTools/screenshots/Aug31_part2.mp4" type="audio/mp4">
-                    </audio>
-                    <audio controls>
-                        <source src="https://symsoph.github.io/HTML_DevTools/screenshots/loop-final.mp3" type="audio/mp3">
-                    </audio>
-            </details>
-            <details>
-                <summary>Image of the Week</summary>
-                <img src="/screenshots/IMG_0650.png" alt="my web icon" width="500" height="500">
-            </details>
-
-        </section>
+  <section>
+    <div class="flex-container">
+        <h2 id="this-week">This Week...</h2>
+        <ol id="descriptors">
+            <li><input type="checkbox">Goals + Feedback</li>
+            <li><input type="checkbox"><b>New Project</b>
+            <ul>
+              <li>Purpose</li>
+              <li>Assign Roles</li>
+              <li>Brainstorm</li>
+            </ul>
+            </li>
+            <li><input type="checkbox">Questions</li>
+        </ol>
+    </div>
+  </section>
+           
+        <h2>:)</h2>
+        <ol>hidden text!</ol>
     </main>
     
+
     <footer>
-        <h3 id="subscribe"><i>Sanity Check</i></h3>
-        <form onsubmit="alert('Done, have a nice day~')">
+      <div class="container">
+        <h3 style="display: inline-table"><i>Sanity Check</i></h3>
+        <h3 style="display: inline-table"><i>Meeting Recordings</i><h3>
+    </div>
+        <form class="grid-container" onsubmit="alert('Done, have a nice day~')">
           <fieldset>          
             <label for="current-date">Today's Date:</label>
             <input type="date" id="current-date" name="current-date"><br><br>
@@ -120,9 +96,42 @@
               <input type="submit" value="Submit">
             <br><br>
           </fieldset>
-        </form>
+          <fieldset class="grid-container">
+
+            <section>
+             <details class="grid-container">
+                  <summary>Video</summary>
+                  <p class="recording_important">Definitely a video from a meeting.</p>
+                      <video width="420" height="440" controls>
+                          <source src="https://symsoph.github.io/HTML_DevTools/screenshots/Aug31_part2.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                
+              </details>
+              <details>
+                  <summary>Audio-only</summary>
+                  <p class="recording_important">First audio file belongs to the actual video. The second one is an experimental music piece for MUS 170 ;)</p>
+                      <audio controls>
+                          <source src="https://symsoph.github.io/HTML_DevTools/screenshots/Aug31_part2.mp4" type="audio/mp4">
+                      </audio>
+                      <audio controls>
+                          <source src="https://symsoph.github.io/HTML_DevTools/screenshots/loop-final.mp3" type="audio/mp3">
+                      </audio>
+              </details>
+              <details>
+                  <summary>Image of the Week</summary>
+                  <p class="recording_important">My watermark, my logo</p>
+                  <img src="/screenshots/IMG_0650.png" alt="my web icon" width="500" height="500">
+              </details>
+              <p class="example">
+                Hover or focus on this <a href="haha no link!">link</a>, then read the message on the bottom left.
+              </p>
+          </section>
+          </fieldset>
+          </form>
         <br>
-        <div id="rcorners1">&copy; sofia n at symsoph.github.io</div>
+        <div class="copyright" id="rcorners1">&copy; sofia n at symsoph.github.io</div>
+        <code>Find the hidden message.</code>
       </footer>  
   </body>
 </html>
