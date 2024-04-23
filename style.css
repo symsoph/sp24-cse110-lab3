@@ -7,6 +7,7 @@
     --main-bg-color: pink;
     --green-border-box: #73AD21;
     --base-color: orange;
+    --record-descript: color-mix(in srgb, blue, white);
 }
 * {
     word-break:keep-all;
@@ -53,7 +54,7 @@ p[class] {
     font-size: 23px;
  }
 p[class="recording_important"] {
-background-color: color-mix(in srgb, blue, white);
+background-color: var(--record-descript);
   }
 #rcorners1 {
     border-radius: 25px;
@@ -102,7 +103,7 @@ h1 {
     display: block;
 }
 h2 { 
-    color: color(from var(--base-color) srgb r g  / 0.5);   
+    color: color(from var(--base-color) srgb r g b / 0.5);   
     font-size: 15vmin; /*relative */
 }
 /* hidden text */
