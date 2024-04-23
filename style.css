@@ -53,7 +53,7 @@ p[class] {
     font-size: 23px;
  }
 p[class="recording_important"] {
-background-color: color-mix(in srgb, blue, white, 80%);
+background-color: color-mix(in srgb, blue, white);
   }
 #rcorners1 {
     border-radius: 25px;
@@ -62,13 +62,14 @@ background-color: color-mix(in srgb, blue, white, 80%);
     width: 200px;
     height: 5mm;  /*abs unit */
     margin: auto;
+    
   }
   
   #rcorners2 {
     border-radius: 25px;
     border: 3px solid #73AD21;
-    padding-top: 20px; 
-    padding-bottom: 40px;
+    padding-top: 0px; 
+    padding-bottom: 60px;
     padding-left: 20px;
     padding-right: 20px;
     width: 800px;
@@ -76,6 +77,10 @@ background-color: color-mix(in srgb, blue, white, 80%);
     margin: auto;
     position: relative;
   }
+#centered {
+    text-align: center;
+}
+  
 #descriptors {
     font-size: 2.5vh;
 }
@@ -97,7 +102,7 @@ h1 {
     display: block;
 }
 h2 { 
-    color: color(from var(--base-color) srgb, r, g, b);   
+    color: color(from var(--base-color) srgb r g  / 0.5);   
     font-size: 15vmin; /*relative */
 }
 /* hidden text */
@@ -137,7 +142,7 @@ h2:has(+ ol) {
 .align fieldset {
     font-weight: bold;
 }
-div.copyright {
+div.copyright { /*  class */
     font-size: 16px; /* copyright bubble */
     max-width: 200px;
     position: static; 
