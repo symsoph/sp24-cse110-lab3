@@ -12,13 +12,6 @@
     word-break:keep-all;
     text-overflow: ellipsis;
 }
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    * {
-        width: 100%;
-    }
-}
-
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -60,7 +53,7 @@ p[class] {
     font-size: 23px;
  }
 p[class="recording_important"] {
-    background-color: color-mix(in srgb, blue, white, 80%);
+background-color: color-mix(in srgb, blue, white, 80%);
   }
 #rcorners1 {
     border-radius: 25px;
