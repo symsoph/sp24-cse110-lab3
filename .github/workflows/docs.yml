@@ -10,19 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Build
-        uses: andstor/jsdoc-action@v1
+        uses: actions/checkout@v3
+      
+      - name: Set up Node.js / Access to 'npm' command
+        uses: actions/setup-node@v3
         with:
-          source_dir: ./
-          output_dir: ./docs
-          config_file: jsdoc.json
-          template: node_modules/docdash
-          front_page: README.md
+          node-version: '14'
+          cache: npm
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./docs
+      - name: Install JSDocs
+        uses: npm i -g jsdocs
+        
+      - name: Install Docdash template
+        uses: npm i docdash
+
+      - name: Run "docs" script to update documentation
+        uses: npm run docs
+
+      - name: Push Docs to Master
+        uses: ad-m/github-push-action@master

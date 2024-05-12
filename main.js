@@ -19,7 +19,7 @@ function hello(num1, num2){
 
 /**
  * Begging, please render documentation
- * @param {String} answer 
+ * @param {String} answer The answer to this statement
  * @returns {String} "thanks"
  */
 function pleaseRender(answer) {
