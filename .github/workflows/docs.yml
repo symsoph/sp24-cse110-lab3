@@ -21,5 +21,19 @@ jobs:
       - name: Run "docs" script to update documentation
         run: npm run docs
 
-      - name: Push Docs to Master
+      - name: Generate Docs
+        run: npx jsdoc -c jsdoc.json
+      
+      - name: Commit Docs
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Generate Docs"
+      
+      - name: Push Docs
         uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: jsdocs
+          force: true
