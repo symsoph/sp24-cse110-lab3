@@ -17,3 +17,11 @@ function hello(num1, num2){
     return sum;
 }
 
+/**
+ * Begging, please render documentation
+ * @param {String} answer 
+ * @returns {String} "thanks"
+ */
+function pleaseRender(answer) {
+    return "thanks";
+}
