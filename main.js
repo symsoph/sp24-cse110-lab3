@@ -8,8 +8,8 @@ function createTest() {
 
 /**
  * Adding two numbers
- * @param {Number} num1 
- * @param {Number} num2 
+ * @param {Number} num1 - assumed
+ * @param {Number} num2 - assumed
  * @returns sum of num1 + num2
  */
 function hello(num1, num2){
