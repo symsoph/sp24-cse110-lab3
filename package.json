@@ -5,6 +5,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "docs": "jsdoc -d docs --configure jsdoc.json"
+    },
+    "dependencies": {
+        "jsdocs": "^0.0.1"
     }
 }
-

@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -18,14 +18,14 @@ jobs:
           node-version: '14'
           cache: npm
 
-      - name: Install JSDocs
-        run: npm i -g jsdocs
-        
-      - name: Install Docdash template
-        run: npm i docdash
+      - name: Install JSDocs and Docdash template
+        run: npm install
+      - run: npm run build
 
       - name: Run "docs" script to update documentation
         run: npm run docs
 
-      - name: Push Docs to Master
-        uses: ad-m/github-push-action@master
+      - name: upload artifacts ("package or set of files, resulting from a build process")
+        uses: actions/upload-pages-artifact@v1
+        with: 
+          path: "./docs"

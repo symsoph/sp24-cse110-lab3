@@ -25,3 +25,12 @@ function hello(num1, num2){
 function pleaseRender(answer) {
     return "thanks";
 }
+
+/**
+ * Boost morale
+ * @param {String} rendering 
+ * @returns {Boolean} false because I believe, I have hope
+ */
+function thisIsNot(rendering) {
+    return false;
+}
