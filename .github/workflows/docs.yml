@@ -11,17 +11,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        
+      - name: Install JSDocs
+        uses: npm i -g jsdocs
+        
+      - name: Install Docdash template
+        uses: npm i docdash
 
-      - name: Build
-        uses: andstor/jsdoc-action@v1
-        with:
-          source_dir: ./
-          output_dir: ./out
-          template: "node_modules/docdash"
-          front_page: README.md
+      - name: Run "docs" script to update documentation
+        uses: npm run docs
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./out
+      - name: Push Docs to Master
+        uses: ad-m/github-push-action@master
