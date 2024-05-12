@@ -17,4 +17,3 @@ function hello(num1, num2){
     return sum;
 }
 
-console.log("hello world");
